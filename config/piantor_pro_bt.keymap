@@ -58,7 +58,7 @@
             //                    | GUI |     | SPC   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp DE_SZ  &trans  &trans  &trans  &trans  &trans  &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans  &to 1  &rgb_ug RGB_TOG  &trans  &trans  &trans  &trans  &trans  &trans  &kp DE_SEMI  &kp COLON  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp DE_SZ  &to 0  &trans  &trans  &kp LEFT_SHIFT  &trans  &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans  &to 1  &rgb_ug RGB_TOG  &trans  &trans  &trans  &trans  &trans  &trans  &kp DE_SEMI  &kp COLON  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
@@ -72,7 +72,7 @@
             //                    | GUI |     | SPC | ENT |     | ALT |
 
             bindings = <
-&trans  &kp EXCL  &kp DE_DQT  &kp HASH  &kp DLLR  &kp PRCNT  &kp AMPS  &kp DE_SLASH  &kp LPAR  &kp RPAR  &kp DE_EQUAL  &kp QMARK  &trans  &trans  &kp DE_A_UMLAUT  &kp DE_O_UMLAUT  &kp DE_EURO  &trans  &kp MINUS  &kp PLUS  &kp LBKT  &kp RBKT  &kp BSLH  &kp GRAVE  &to 2  &trans  &trans  &kp DE_U_UMLAUT  &kp LT  &kp GT  &kp UNDER  &kp PLUS  &kp LBRC  &kp RBRC  &kp PIPE  &kp TILDE  &trans  &trans  &trans  &trans  &trans  &trans
+&kp CARET  &kp EXCL  &kp DE_DQT  &kp DE_SECTION  &kp DLLR  &kp PRCNT  &kp AMPS  &kp DE_SLASH  &kp LPAR  &kp RPAR  &kp DE_EQUAL  &kp QMARK  &to 0  &kp DE_U_UMLAUT  &kp DE_A_UMLAUT  &kp DE_O_UMLAUT  &kp DE_EURO  &kp POUND  &kp MINUS  &kp PLUS  &mt LEFT_SHIFT LBKT  &kp RBKT  &kp BSLH  &kp GRAVE  &to 2  &trans  &trans  &trans  &kp LT  &kp GT  &kp UNDER  &kp PLUS  &kp LBRC  &kp RBRC  &kp PIPE  &kp TILDE  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
