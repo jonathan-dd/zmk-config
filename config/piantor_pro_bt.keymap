@@ -35,44 +35,57 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            display-name = "QWERTY";
+            display-name = "QWERTZ";
 
-            // --------------------------------------------------------------------------------
-            // |  TAB |  Q  |  W  |  E  |  R  |  T  |  Y  |  U   |  I  |  O  |  P  | BSPC |
-            // | CTRL |  A  |  S  |  D  |  F  |  G  |  H  |  J   |  K  |  L  |  ;  |  '   |
-            // | SHFT |  Z  |  X  |  C  |  V  |  B  |  N  |  M   |  ,  |  .  |  /  | ESC  |
-            //                    | GUI | LWR | SPC | ENT | RSE  | ALT |
+            // -----------------------------------------------------------------------------------------
+            // |  TAB |  Q  |  W  |  E  |  R  |  T  |  Z  |  U  |  I  |  O  |  P  |  Ü  |
+            // | CTRL |  A  |  S  |  D  |  F  |  G  |  H  |  J  |  K  |  L  |  Ö  |  Ä  |
+            // | SHFT |  Y  |  X  |  C  |  V  |  B  |  N  |  M  |  ,  |  .  |  -  |  ß  |
+            //                     | GUI | LWR | SPC | ENT | RSE | BSPC |
+            //
+            // Home-Row-Mods: halten = CTRL (ESC-Tap), ALT (S), SHIFT (D und K)
 
             bindings = <
-&kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp DE_Z  &kp U  &kp I  &kp O  &kp P  &trans  &mt LCTRL ESC  &kp A  &mt LEFT_ALT S  &mt LEFT_SHIFT D  &kp F  &kp G  &kp H  &kp J  &mt RIGHT_SHIFT K  &kp L  &kp BACKSLASH  &trans  &kp LSHFT  &kp DE_Y  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &trans  &kp LGUI  &mo 1  &kp SPACE  &kp RET  &mo 2  &kp BACKSPACE
+&kp TAB  &kp DE_Q  &kp DE_W  &kp DE_E  &kp DE_R  &kp DE_T  &kp DE_Z  &kp DE_U  &kp DE_I  &kp DE_O  &kp DE_P  &kp DE_U_UMLAUT
+&mt LCTRL ESC  &kp DE_A  &mt LEFT_ALT DE_S  &mt LEFT_SHIFT DE_D  &kp DE_F  &kp DE_G  &kp DE_H  &kp DE_J  &mt RIGHT_SHIFT DE_K  &kp DE_L  &kp DE_O_UMLAUT  &kp DE_A_UMLAUT
+&kp LSHFT  &kp DE_Y  &kp DE_X  &kp DE_C  &kp DE_V  &kp DE_B  &kp DE_N  &kp DE_M  &kp DE_COMMA  &kp DE_DOT  &kp DE_MINUS  &kp DE_SZ
+&kp LGUI  &mo 1  &kp SPACE  &kp RET  &mo 2  &kp BACKSPACE
             >;
         };
 
         lower_layer {
-            display-name = "NUMBER";
+            display-name = "ZAHLEN";
 
             // -----------------------------------------------------------------------------------------
-            // |  TAB |  1  |  2  |  3  |  4  |  5    |  6  |  7  |  8  |  9  |  0  | BSPC |
-            // | CTRL | BT1 | BT2 | BT3 | BT4 | BT5   | LFT | DWN |  UP | RGT |     |      |
-            // | SHFT | BTCR| RGB | RST | BOOT| Unlock|     |     |     |     |     |      |
-            //                    | GUI |     | SPC   | ENT |     | ALT |
+            // Exakt die deutsche Zahlenreihe:
+            // |  1  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  9  |  0  |  ß  |  ´  |
+            // | EXIT|  a  |  s  | SHFT|  f  |  g  |  ←  |  ↓  |  ↑  |  →  |  ö  |  ä  |
+            // | LOCK| RGB |  x  |  c  |  v  |  b  |  n  |  m  |  ;  |  :  |  -  |  ß  |
+            //                     | GUI |     | SPC | ENT |     | BSPC |
 
             bindings = <
-&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp DE_SZ  &to 0  &trans  &trans  &kp LEFT_SHIFT  &trans  &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans  &to 1  &rgb_ug RGB_TOG  &trans  &trans  &trans  &trans  &trans  &trans  &kp DE_SEMI  &kp COLON  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp DE_N1  &kp DE_N2  &kp DE_N3  &kp DE_N4  &kp DE_N5  &kp DE_N6  &kp DE_N7  &kp DE_N8  &kp DE_N9  &kp DE_N0  &kp DE_SZ  &kp DE_ACUTE
+&to 0  &trans  &trans  &kp LEFT_SHIFT  &trans  &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans
+&to 1  &rgb_ug RGB_TOG  &trans  &trans  &trans  &trans  &trans  &trans  &kp DE_SEMI  &kp DE_COLON  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
         raise_layer {
-            display-name = "SYMBOL";
+            display-name = "SYMBOLE";
 
             // -----------------------------------------------------------------------------------------
-            // |  TAB |  !  |  @  |  #  |  $  |  %  |  ^  |  &  |  *  |  (  |  )  | BSPC |
-            // | CTRL |     |     |     |     |     |  -  |  =  |  [  |  ]  |  \  |  `   |
-            // | SHFT |     |     |     |     |     |  _  |  +  |  {  |  }  | "|" |  ~   |
-            //                    | GUI |     | SPC | ENT |     | ALT |
+            // Exakt die deutsche Shift-Reihe plus Sonderzeichen:
+            // |  !  |  "  |  §  |  $  |  %  |  &  |  /  |  (  |  )  |  =  |  ?  |  `  |
+            // | EXIT|  ü  |  ä  |  ö  |  €  |  #  |  -  |  +  |  [  |  ]  |  \  |  ^  |
+            // | LOCK|  y  |  x  |  c  |  <  |  >  |  _  |  +  |  {  |  }  |  |  |  ~  |
+            //                     | GUI |     | SPC | ENT |     | BSPC |
 
             bindings = <
-&kp CARET  &kp EXCL  &kp DE_DQT  &kp DE_SECTION  &kp DLLR  &kp PRCNT  &kp AMPS  &kp DE_SLASH  &kp LPAR  &kp RPAR  &kp DE_EQUAL  &kp QMARK  &to 0  &kp DE_U_UMLAUT  &kp DE_A_UMLAUT  &kp DE_O_UMLAUT  &kp DE_EURO  &kp POUND  &kp MINUS  &kp PLUS  &mt LEFT_SHIFT LBKT  &kp RBKT  &kp BSLH  &kp GRAVE  &to 2  &trans  &trans  &trans  &kp LT  &kp GT  &kp UNDER  &kp PLUS  &kp LBRC  &kp RBRC  &kp PIPE  &kp TILDE  &trans  &trans  &trans  &trans  &trans  &trans
+&kp DE_EXCL  &kp DE_DQT  &kp DE_SECTION  &kp DE_DLLR  &kp DE_PRCNT  &kp DE_AMPS  &kp DE_SLASH  &kp DE_LPAR  &kp DE_RPAR  &kp DE_EQUAL  &kp DE_QMARK  &kp DE_GRAVE
+&to 0  &kp LS(DE_U_UMLAUT)  &kp LS(DE_A_UMLAUT)  &kp LS(DE_O_UMLAUT)  &kp DE_EURO  &kp DE_HASH  &kp DE_MINUS  &kp DE_PLUS  &mt LEFT_SHIFT DE_LBKT  &kp DE_RBKT  &kp DE_BSLH  &kp DE_CARET
+&to 2  &kp DE_DEGREE  &kp DE_SUPER2  &kp DE_SUPER3  &kp DE_LT  &kp DE_GT  &kp DE_UNDER  &kp DE_MICRO  &kp DE_LBRC  &kp DE_RBRC  &kp DE_PIPE  &kp DE_TILDE
+&trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
